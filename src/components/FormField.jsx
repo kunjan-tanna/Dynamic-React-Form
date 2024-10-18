@@ -117,7 +117,7 @@ function FormField({
             max={field.max}
             step={field.step}
             name={field.name}
-            value={sliderValue}
+            value={value}
             onChange={handleSliderChange}
             marks={[
               { value: field.min, label: field.min.toString() },

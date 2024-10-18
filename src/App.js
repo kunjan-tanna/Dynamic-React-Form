@@ -23,6 +23,10 @@ const createGroupValidation = (group) => {
             .required(`${field.label} is required`)
             .min(field.min, `${field.label} cannot be less than ${field.min}`)
             .max(field.max, `${field.label} cannot be more than ${field.max}`);
+        } else {
+          fieldName[field.name] = yup
+            .number()
+            .typeError(`${field.label} is required`);
         }
       } else {
         fieldName[field.name] = yup
