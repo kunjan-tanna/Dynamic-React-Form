@@ -10,7 +10,7 @@ function Sidebar({ groups, setActiveGroupIndex }) {
         {groups?.map((group, index) => (
           <List key={index}>
             <ListItem
-              button
+              button="true"
               sx={{ cursor: "pointer" }}
               onClick={() => setActiveGroupIndex(index)}
             >

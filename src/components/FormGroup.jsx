@@ -8,11 +8,13 @@ function FormGroup({
   formData,
   handleInputChange,
   errors,
+  handleSliderChange,
+  sliderValue,
 }) {
   console.log("groups.fields", groups.fields);
   return (
     <>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" sx={{ textAlign: "center", pb: 4 }}>
         {groups.title}
       </Typography>
       <Box component="form" onSubmit={handleSubmit}>
@@ -24,6 +26,8 @@ function FormGroup({
               value={formData[field.name]}
               onChange={handleInputChange}
               errors={errors[field.name]}
+              handleSliderChange={handleSliderChange}
+              sliderValue={sliderValue}
             />
           ))}
         </Grid>
